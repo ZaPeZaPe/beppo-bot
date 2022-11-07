@@ -143,56 +143,6 @@ class Owner(commands.Cog):
             value="field value",
             inline=True
         )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=True
-        )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=True
-        )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=False
-        )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=True
-        )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=True
-        )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=False
-        )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=True
-        )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=True
-        )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=True
-        )
-        embed.add_field(
-            name="field name",
-            value="field value",
-            inline=True
-        )
         embed.set_image(url="https://imgur.com/c2Dfniq.jpg")
         await ctx.reply(embed=embed, mention_author=False)
 
