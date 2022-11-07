@@ -1,0 +1,10 @@
+.env
+data/stock.json
+data/text.txt
+discloud.config
+Lib
+pyvenv.cfg
+requirements.txt
+Scripts
+
+

@@ -1,0 +1,24 @@
+{
+    "**__Per usage__**" : {
+      "**Pickaxe Reset**" : "Resets your pickaxe quantity",
+      "**Random Loot**" : "Unbox a random loot",
+      "**Rusted Coin**" : "Grants a 10% more luck in mining commands",
+      "**Thief Knife**" : "You can threat and rob someone with it",
+      "**???**": "Gives '???' What's the use of it?"
+    },
+    "**__Temporary (3hr)__**" : {
+      "**The Pen**" : "Doubles the wage gain",
+      "**The Ring**" : "Doubles the chances of mining",
+      "**The Suit**" : "Make you invisible against robbers",
+      "**The Wallet**" : "Doubles the mining gain",
+      "**The Watch**" : "Cuts the pickaxe cooldown by half"
+    },
+    "**__Monthly__**" : {
+      "**Bronze Account**" : "Gives 'The Pen' and a role in the Beppo Server",
+      "**Silver Account**" : "Bronze Account previleges + 'The Suit'",
+      "**Platinum Account**" : "Silver Account previleges + 'The Watch'",
+      "**Ruby Account**" : "Platinum Account previleges + 'The Wallet'",
+      "**Diamond Account**" : "Ruby Account previleges + 'The Ring'"
+    },
+    "Arcade chips" : "Each chip can give you some boosts (or get you in trouble)."
+}

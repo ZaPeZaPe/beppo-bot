@@ -1,0 +1,26 @@
+{
+  "**__Economy__**" : {
+    "**/crypto list**" : "Shows the crypto list",
+    "**/crypto wallet**" : "Crypto Wallet",
+    "**/crypyo beppowallet**" : "BPPCs Wallet",
+    "**/crypto buy**" : "Action to buy a crypto of your wish",
+    "**/crypto sell**" : "Action to sell a crypto that you own",
+    "**/daily**" : "Daily command to claim BPPCs",
+    "**/mine**" : "Mine command that claims nothing, BPPCs or a random cryptocurrency",
+    "**/help_info**" : "Can give some advice about sections on /crypto list image"
+  },
+  "**__/seemore commands__**" : {
+    "**intervals**" : "Enable/disable more time intervals in /crypto symbol",
+    "**names**" : "Enable/disable the currency names in /crypto",
+    "**prices**" : "Enable/disable the currency prices in /crypto",
+    "**percentages**" : "Enable/disable the currency percentage in /crypto"
+  },
+  "**__Utilities__**" : {
+    "**/level**" : "Shows your level",
+    "**/serverinfo**" : "Shows server information",
+    "**/ping**" : "Shows bot latency"
+  },
+  "**__Ranks__**" : {
+    "**Soon**" : "mais comandos em breve..."
+  }
+}
