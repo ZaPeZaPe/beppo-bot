@@ -147,75 +147,75 @@ class Events(commands.Cog):
             'X-CMC_PRO_API_KEY': apikey,
         }
 
-        # session = Session()
-        # session.headers.update(headers)
+        session = Session()
+        session.headers.update(headers)
         
-        # currencyCollection = db['currencies']
+        currencyCollection = db['currencies']
         
-        # try:
-        #     response = session.get(url, params=parameters)
-        #     data = loads(response.text)
-        #     i = 0
-        #     while i < len(data['data']):
-        #         currency = "USD"
-        #         id = listGet("id", data, i)
-        #         name = listGet("name", data, i)
-        #         symbol = listGet("symbol", data, i)
-        #         rank = listGet("rank", data, i)
-        #         priceUSD = listGet("priceUSD", data, i)
-        #         # priceBRL = listGet("priceBRL", data, i)
-        #         volume24h = listGet("volume24h", data, i)
-        #         volumec24h = listGet("volumec24h", data, i)
-        #         pc1h = listGet("pc1h", data, i)
-        #         pc24h = listGet("pc24h", data, i)
-        #         pc7d = listGet("pc7d", data, i)
-        #         pc30d = listGet("pc30d", data, i)
-        #         pc60d = listGet("pc60d", data, i)
-        #         pc90d = listGet("pc90d", data, i)
-        #         mktcap = listGet("mktcap", data, i)
-        #         i+=1
-        #         findCurrency = currencyCollection.find_one({"symbol": symbol})
-        #         if findCurrency != None:
-        #             currencyCollection.update_one({"symbol": symbol}, {"$set": {
-        #                 "rank": rank,
-        #                 # "priceBRL": priceBRL,
-        #                 "price": priceUSD,
-        #                 "volume24h": volume24h,
-        #                 "volumec24h": volumec24h,
-        #                 "mktcap": mktcap,
-        #                 "priceChanges": {
-        #                     "1h": pc1h,
-        #                     "24h": pc24h,
-        #                     "7d": pc7d,
-        #                     "30d": pc30d,
-        #                     "60d": pc60d,
-        #                     "90d": pc90d
-        #                 }
-        #             }})
-        #         else:
-        #             currencyCollection.insert_one({
-        #                 "_id": id,
-        #                 "currency": "USD",
-        #                 f"{symbol}": f"{name}",
-        #                 "symbol": f"{symbol}",
-        #                 "rank": rank,
-        #                 "price": priceUSD,
-        #                 "volume24h": volume24h,
-        #                 "volumec24h": volumec24h,
-        #                 "mktcap": mktcap,
-        #                 "priceChanges": {
-        #                     "1h" : pc1h,
-        #                     "24h": pc24h,
-        #                     "7d": pc7d,
-        #                     "30d": pc30d,
-        #                     "60d": pc60d,
-        #                     "90d": pc90d
-        #                 }
-        #             })
-        #     print(f"Refreshed")
+        try:
+            response = session.get(url, params=parameters)
+            data = loads(response.text)
+            i = 0
+            while i < len(data['data']):
+                currency = "USD"
+                id = listGet("id", data, i)
+                name = listGet("name", data, i)
+                symbol = listGet("symbol", data, i)
+                rank = listGet("rank", data, i)
+                priceUSD = listGet("priceUSD", data, i)
+                # priceBRL = listGet("priceBRL", data, i)
+                volume24h = listGet("volume24h", data, i)
+                volumec24h = listGet("volumec24h", data, i)
+                pc1h = listGet("pc1h", data, i)
+                pc24h = listGet("pc24h", data, i)
+                pc7d = listGet("pc7d", data, i)
+                pc30d = listGet("pc30d", data, i)
+                pc60d = listGet("pc60d", data, i)
+                pc90d = listGet("pc90d", data, i)
+                mktcap = listGet("mktcap", data, i)
+                i+=1
+                findCurrency = currencyCollection.find_one({"symbol": symbol})
+                if findCurrency != None:
+                    currencyCollection.update_one({"symbol": symbol}, {"$set": {
+                        "rank": rank,
+                        # "priceBRL": priceBRL,
+                        "price": priceUSD,
+                        "volume24h": volume24h,
+                        "volumec24h": volumec24h,
+                        "mktcap": mktcap,
+                        "priceChanges": {
+                            "1h": pc1h,
+                            "24h": pc24h,
+                            "7d": pc7d,
+                            "30d": pc30d,
+                            "60d": pc60d,
+                            "90d": pc90d
+                        }
+                    }})
+                else:
+                    currencyCollection.insert_one({
+                        "_id": id,
+                        "currency": "USD",
+                        f"{symbol}": f"{name}",
+                        "symbol": f"{symbol}",
+                        "rank": rank,
+                        "price": priceUSD,
+                        "volume24h": volume24h,
+                        "volumec24h": volumec24h,
+                        "mktcap": mktcap,
+                        "priceChanges": {
+                            "1h" : pc1h,
+                            "24h": pc24h,
+                            "7d": pc7d,
+                            "30d": pc30d,
+                            "60d": pc60d,
+                            "90d": pc90d
+                        }
+                    })
+            print(f"Refreshed")
         
-        # except (ConnectionError, Timeout, TooManyRedirects) as e:
-        #     print(e)
+        except (ConnectionError, Timeout, TooManyRedirects) as e:
+            print(e)
 
     async def update_user_data(self, userCollection, user):
         userCollection.insert_one({
