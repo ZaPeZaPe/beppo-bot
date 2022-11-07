@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta
-from main import db, embedColor, button, View, commands, Embed, ApplicationContext
 from random import randint
+
+from main import (ApplicationContext, Embed, View, button, commands, db,
+                  embedColor)
 
 MAX_NUMBER=20000
 RECIEVE_COIN=99

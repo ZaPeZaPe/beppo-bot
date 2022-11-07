@@ -1,8 +1,11 @@
-from discord import ApplicationContext, Embed, Option, OptionChoice, User, ButtonStyle, SlashCommandGroup
+from math import floor, log10
+
+from discord import (ApplicationContext, ButtonStyle, Embed, Option,
+                     OptionChoice, SlashCommandGroup, User)
 from discord.ext import commands
 from discord.ui import View, button
+
 from main import db, embedColor, load
-from math import floor, log10
 
 br='\n'
 blank=''

@@ -1,11 +1,13 @@
 from datetime import datetime, time, timedelta
-from discord.ext import tasks
 from json import loads
 from logging import error
-from main import db, embedColor, apikey, commands, ApplicationContext, Embed
+from traceback import format_exc
+
+from discord.ext import tasks
 from requests import Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
-from traceback import format_exc
+
+from main import ApplicationContext, Embed, apikey, commands, db, embedColor
 
 exp = 5
 
